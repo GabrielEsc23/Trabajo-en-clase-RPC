@@ -1,0 +1,19 @@
+syntax= "proto3";
+
+//Definir funciones remotas
+service Convertir{
+
+    rpc CelciusFarenheit (Parametros) returns (Resultado);
+    rpc FarenheitCelcius (Parametros) returns (Resultado);
+}
+
+//Definir Parámetros 
+message Parametros{
+
+    double valor=1;
+}
+
+//Definir Resultado
+message Resultado{
+    double Resultado=1;
+}
