@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+//Definir las dunciones Remotas 
+service Calculadora{
+    rpc Sumar(Operacion) returns (Resultado);
+    rpc Restar(Operacion) returns (Resultado); 
+    rpc Multiplicar(Operacion) returns (Resultado);
+    rpc Dividir(Operacion) returns (Resultado);
+}
+
+//Definir Parámetros
+message Operacion{
+    double a = 1; 
+    double b=2;
+
+}
+
+//Definir Resultados
+message Resultado{
+    double resultado = 1; 
+}
